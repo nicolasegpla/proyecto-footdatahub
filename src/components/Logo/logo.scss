@@ -1,0 +1,24 @@
+@use '../../sass/global';
+
+.h1--logo {
+    width: 8.9375rem;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: global.$second-color;
+    font-family: global.$fontSecondary;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: normal;
+    @include global.media-up(medium) {
+        font-size: 1.5rem;
+    }
+    @include global.media-up(expanded) {
+    font-size: 1.625rem;
+    }
+    &__span {
+        color: global.$active-color;
+    }
+}

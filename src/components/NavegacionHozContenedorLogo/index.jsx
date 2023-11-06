@@ -1,3 +1,4 @@
+import { Logo } from '../Logo'
 import { MenuHamburguesa } from '../MenuHamburguesa'
 import './navegacionhozcontenedorlogo.scss'
 
@@ -8,6 +9,7 @@ function NavegacionHozContenedorLogo() {
         <>
             <div className="div--contenedor--logo">
                 <MenuHamburguesa />
+                <Logo />
             </div>
         </>
     )
