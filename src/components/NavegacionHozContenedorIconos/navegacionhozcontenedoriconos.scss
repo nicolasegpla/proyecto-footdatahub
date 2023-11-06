@@ -1,0 +1,9 @@
+@use '../../sass/global';
+
+.div--contenedor--iconos {
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
