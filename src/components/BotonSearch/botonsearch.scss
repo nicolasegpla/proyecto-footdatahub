@@ -1,0 +1,29 @@
+@use '../../sass/global';
+
+.div--boton-search {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .25rem;
+    background-color: global.$primary-color;
+    @include global.media-up(medium) {
+        display: none;
+    }
+    @include global.media-up(expanded) {
+        display: none;
+    }
+    &__label {
+        width: 1.5625rem;
+        height: auto;
+        color: global.$second-color;
+        font-family: global.$fontSecondary;
+        font-size: .5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}

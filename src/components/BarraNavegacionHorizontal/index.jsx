@@ -1,5 +1,6 @@
 import React from "react";
 import { NavegacionHozContenedorLogo} from '../NavegacionHozContenedorLogo'
+import { NavegacionHozContenedorIconos} from '../NavegacionHozContenedorIconos'
 import './_barraNavegacionHorizontal.scss'
 
 function BarraNavegacionHorizontal() {
@@ -7,6 +8,7 @@ function BarraNavegacionHorizontal() {
         <>
             <nav className="nav-h-container">
                 <NavegacionHozContenedorLogo />
+                <NavegacionHozContenedorIconos />
             </nav>
         </>
     )
