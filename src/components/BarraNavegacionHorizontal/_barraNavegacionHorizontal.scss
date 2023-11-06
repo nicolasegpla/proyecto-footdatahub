@@ -7,4 +7,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include global.media-up(medium) {
+        height: 4.125rem;
+    }
+    @include global.media-up(expanded) {
+        height: 4.25rem;
+    }
 }

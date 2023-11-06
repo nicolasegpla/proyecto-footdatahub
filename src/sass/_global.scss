@@ -21,3 +21,17 @@ $active-color: #76FF03;
     margin: 0;
     padding: 0;
 }
+
+$breakpoints: (
+    compact: 37.5rem,
+    medium: 37.5625rem,
+    expanded: 52.5625rem,
+);
+
+@mixin media-up($breakpoint) {
+    @media screen and (min-width: map-get(
+        $breakpoints, $breakpoint
+    )){
+        @content;
+    }
+}
