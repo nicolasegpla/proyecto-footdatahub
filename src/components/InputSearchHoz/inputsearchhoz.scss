@@ -1,0 +1,40 @@
+@use '../../sass/global';
+
+.div-layout {
+    width: 15.75rem;
+    height: 3.125rem;
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    @include global.media-up(medium) {
+        display: flex;
+    }
+    @include global.media-up(expanded) {
+        height: 3.25rem;
+        display: flex;
+    }
+    &__input {
+        width: 14.25rem;
+        height: 2.625rem;
+        padding-left: 1rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+        background-color: global.$third-color;
+        border: none;
+        border-radius: .625rem;
+        font-family: global.$fontSecondary;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #676262;
+        cursor: pointer;
+        @include global.media-up(expanded) {
+            height: 2.75rem;
+        }
+    }
+}
+

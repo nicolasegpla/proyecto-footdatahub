@@ -6,8 +6,8 @@ function BotonSearch () {
     return (
         <>
             <div className='div--boton-search'>
-                <IconSearch />
-                <label className='div--boton-search__label'>Search</label>
+                <IconSearch type={'search'} />
+                <label className='div--boton-search__label'>Buscar</label>
             </div>
         </>
     )
