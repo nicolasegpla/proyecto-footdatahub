@@ -1,5 +1,6 @@
 import { BotonHoy } from '../BotonHoy'
 import { BotonSearch } from '../BotonSearch'
+import { IconoIdiomas } from '../IconoIdiomas'
 import { InputSearchHoz } from '../InputSearchHoz'
 import './navegacionhozcontenedoriconos.scss'
 
