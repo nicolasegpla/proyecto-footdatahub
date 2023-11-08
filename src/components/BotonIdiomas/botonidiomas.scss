@@ -1,0 +1,43 @@
+@use '../../sass/global';
+
+.div--boton-idiomas {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: .25rem;
+    background-color: global.$primary-color;
+    @include global.media-up(medium) {
+        width: 3.125rem;
+        height: 3.125rem;
+        cursor: pointer;
+    }
+    @include global.media-up(expanded) {
+        width: 3.25rem;
+        height: 3.25rem;
+        cursor: pointer;
+    }
+    &__label {
+        width: 1.5625rem;
+        height: auto;
+        color: global.$second-color;
+        font-family: global.$fontSecondary;
+        font-size: .5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include global.media-up(medium) {
+            width: 2.0625rem;
+            height: .875rem;
+            font-size: .625rem;
+        }
+        @include global.media-up(expanded) {
+            width: 2.6875rem;
+            height: .875rem;
+            font-size: .75rem;
+        }
+    }
+}

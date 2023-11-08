@@ -1,7 +1,17 @@
 @use '../../sass/global';
 
 .svg--icon--idiomas-nav {
-    width: 1.625rem;
-    height: 1.625rem;
+    width: 1.5rem;
+    height: 1.5rem;
     fill: global.$third-color;
+    @include global.media-up(medium) {
+        width: 1.625rem;
+        height: 1.625rem;
+        cursor: pointer;
+    }
+    @include global.media-up(expanded) {
+        width: 1.625rem;
+        height: 1.625rem;
+        cursor: pointer;
+    }
 }
