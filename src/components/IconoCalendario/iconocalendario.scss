@@ -1,26 +1,14 @@
 @use '../../sass/global';
 
-.svg--icon-search {
+.svg--icon--calendar-nav {
     width: 1.625rem;
     height: 1.625rem;
+    fill: none;
     stroke: global.$third-color;
     @include global.media-up(medium) {
         width: 1.625rem;
         height: 1.625rem;
     }
-    @include global.media-up(expanded) {
-        width: 1.75rem;
-        height: 1.75rem;
-    }
-}
-
-.svg--icon-input {
-    width: 1.625rem;
-    height: 1.625rem;
-    position: absolute;
-    right: 1.5rem;
-    stroke: #000000;
-    fill: none;
     @include global.media-up(expanded) {
         width: 1.75rem;
         height: 1.75rem;
