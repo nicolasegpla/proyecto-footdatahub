@@ -1,7 +1,10 @@
+import React from 'react';
 import { IconoCalendario } from '../IconoCalendario';
 import './botonhoy.scss';
 
+
 function BotonHoy () {
+
     return (
         <>
             <div className='div--boton-hoy'>
