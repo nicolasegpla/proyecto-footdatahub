@@ -18,23 +18,25 @@ app.use(express.json({
 
 app.use(cors());
 
+
+//Datos bases de la API
 const APIKEY = '?api_token=tYj0DC28VewdiBO9HaZMtTAP09YUW9tKViKowYncKVxnVNbKDDoWqVVYLsPo';
+const BaseURL = 'https://api.sportmonks.com/v3/football/';
 
 
-//const ligas = [];
-async function datos() {
-    const res = await fetch(`https://api.sportmonks.com/v3/football/leagues${APIKEY}`)
+//Con la funcion datosLigas vamos a consumir el endpoint de leagues.
+async function datosLigas( ligas ) {
+    const res = await fetch(`${BaseURL}${ ligas }${APIKEY}`)
     const data = await res.json()
-    //ligas.push(data);
+    
+    // Esta es la ruta creada para consumir el endpoint leagues desde nuestro cliente
     app.get('/leagues', (req, res) => {
         res.send(JSON.stringify(data));
     })
 }    
-datos()
+datosLigas('leagues');
 
-/*app.get('/leagues', (req, res) => {
-    res.send(JSON.stringify(ligas));
-})*/
+
 
 app.listen(port, () => {
     console.log(`Estoy ejecutandome en http:/localhost:${port}`)
