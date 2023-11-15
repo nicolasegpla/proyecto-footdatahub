@@ -1,9 +1,9 @@
 import './contenedorligaspopulares.scss';
 
-function ContenedorLigasPopulares ({ children }) {
+function ContenedorLigasPopulares (props) {
     return (
         <>
-            <ul className='ul--contenedor-ligas'>{ children }</ul>
+            <ul className='ul--contenedor-ligas'>{ props.children }</ul>
         </>
     )
 }

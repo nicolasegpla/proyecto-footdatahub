@@ -1,0 +1,18 @@
+@use '../../sass/global';
+
+.li--contenedor-liga {
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: global.$second-color;
+    border-radius: 50%;
+    border: .0625rem solid global.$active-color;
+    cursor: pointer;
+    &__img {
+        width: 65%;
+        height: 65%;
+        object-fit: contain;
+    }
+}

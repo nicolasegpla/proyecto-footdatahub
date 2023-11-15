@@ -1,9 +1,13 @@
 @use '../../sass/global';
 
 .ul--contenedor-ligas {
-    width: 18.5rem;
+    width: 90%;
     height: 4rem;
-    background-color: aliceblue;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
     border: none;
     border-radius: .625rem;
 }
