@@ -10,4 +10,24 @@
     background-color: transparent;
     border: none;
     border-radius: .625rem;
+    @include global.media-up(medium) {
+        width: 3.125rem;
+        height: 90%;
+        margin: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border: none;
+    }
+    @include global.media-up(expanded) {
+        width: 3.25rem;
+        height: 90%;
+        margin: 1rem 0 1rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        border: none;
+    }
 }

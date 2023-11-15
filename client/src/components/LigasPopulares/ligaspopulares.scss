@@ -9,4 +9,18 @@
     align-items: center;
     background-color: global.$primary-color;
     border-radius: .625rem;
+    @include global.media-up(medium) {
+        width: 5.25rem;
+        height: auto;
+        margin: 0;
+        border-radius: 0 0 .625rem 0;
+        border: none;
+    }
+    @include global.media-up(expanded) {
+        width: 5.5rem;
+        height: auto;
+        margin: 0;
+        border-radius: 0 0 .625rem 0;
+        border: none;
+    }
 }
