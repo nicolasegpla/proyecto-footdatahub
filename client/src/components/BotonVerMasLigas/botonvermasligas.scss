@@ -1,0 +1,12 @@
+@use '../../sass/global';
+
+.button-ver-mas {
+    width: 3.25rem;
+    height: 3.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: global.$active-color;
+    border-radius: 50%;
+    border: 1px solid global.$active-color;
+}

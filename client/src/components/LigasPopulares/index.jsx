@@ -3,6 +3,7 @@ import { ContenedorLigasPopulares } from '../ContenedorLigasPopulares';
 import { DataContext } from '../DataContext/DataContext';
 import { ListadoLigasPopulares } from '../ListadoLigasPopulares';
 import './ligaspopulares.scss';
+import { BotonVerMasLigas } from '../BotonVerMasLigas';
 
 
 function LigasPopulares () {
@@ -16,6 +17,7 @@ function LigasPopulares () {
                     {dataTopLigas.map((liga) => (
                         <ListadoLigasPopulares key={liga.id} img={liga.image_path} />
                     ))}
+                    <BotonVerMasLigas />
                 </ContenedorLigasPopulares>
             </section>
         </>

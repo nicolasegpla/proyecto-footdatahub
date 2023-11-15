@@ -1,3 +1,4 @@
+import { BotonVerMasLigas } from '../BotonVerMasLigas';
 import './contenedorligaspopulares.scss';
 
 function ContenedorLigasPopulares (props) {
