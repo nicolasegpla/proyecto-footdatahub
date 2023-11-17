@@ -1,26 +1,15 @@
 import React, { useEffect } from 'react';
 import './listadoligaspopulares.scss';
+import { DataContext } from '../DataContext/DataContext';
 
-function ListadoLigasPopulares ({ img, id }) {
+function ListadoLigasPopulares ({ img, id, name }) {
     
-
-    function prueba () {
-            fetch(`http://localhost:3040/leagues/${id}`)
-            .then(res => res.json())
-            .then(response => {
-                //En este array estaran almacenadas las ligas populares a renderizar//
-                const pruebaliga = response;
-                let { data } = pruebaliga;
-                
-               console.log(data.name);
-                })
-            .catch((error) => console.log(`tenemos errores de carga ${error}`));
-    }
+    const { getLeagueById } = React.useContext(DataContext);
     
     return (
         <>
-            <li className='li--contenedor-liga' onClick={() => {prueba()}}>
-                <img className='li--contenedor-liga__img' src={img} alt="" />
+            <li className='li--contenedor-liga' onClick={() => (getLeagueById(id))}>
+                <img className='li--contenedor-liga__img' src={img} alt={`Logo de la liga ${name}`} />
             </li>
         </>
     )

@@ -15,7 +15,12 @@ function LigasPopulares () {
             <section className='section--ligas-populares'>
                 <ContenedorLigasPopulares>
                     {dataTopLigas.map((liga) => (
-                        <ListadoLigasPopulares key={liga.id} img={liga.image_path} id={liga.id} />
+                        <ListadoLigasPopulares 
+                            key={liga.id} 
+                            img={liga.image_path} 
+                            id={liga.id}
+                            name={liga.name}
+                            />
                     ))}
                     <BotonVerMasLigas />
                 </ContenedorLigasPopulares>
