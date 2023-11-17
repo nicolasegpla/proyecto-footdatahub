@@ -29,14 +29,26 @@ function useGetData () {
                 const pruebaliga = response;
                 let { data } = pruebaliga;
                 
-            console.log(data.name);
+                console.log(data.name);
                 })
             .catch((error) => console.log(`tenemos errores de carga ${error}`));
+    }
+    //La funcioin getallLeagues nos trae la data de todas las ligas disponibles en nuestra suscripcion //
+    function getAllLeagues () {
+        fetch(`${baseURL}leagues`)
+            .then(res => res.json())
+            .then(response => {
+                const allLeagues = response;
+                let { data } = allLeagues;
+
+                console.log(data);
+            })
     }
 
     return {
         dataTopLigas,
         getLeagueById,
+        getAllLeagues,
     };
 }
 
