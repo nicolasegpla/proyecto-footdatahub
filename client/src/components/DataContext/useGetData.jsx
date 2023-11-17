@@ -6,6 +6,9 @@ function useGetData () {
     const baseURL = 'http://localhost:3040/';
     
     const [dataTopLigas, setDataTopLigas] = useState([]);// Almacena los datos de las ligas populares //
+    const [loading, setLoading ] = useState(true)
+
+   
 
     // Este useEffect nos trae todas las ligas y almacena las ligas populares //
     useEffect(() => {
@@ -15,9 +18,12 @@ function useGetData () {
             //En este array estaran almacenadas las ligas populares a renderizar//
             const topLigas = [response.data[0]]
             setDataTopLigas( topLigas);
+            setLoading(false)
             })
         .catch((error) => console.log(`tenemos errores de carga ${error}`));
     }, []);
+
+    
 
     // La funcion getLeagueById nos trae la data de una liga por id //
     function getLeagueById (id) {
@@ -49,6 +55,7 @@ function useGetData () {
         dataTopLigas,
         getLeagueById,
         getAllLeagues,
+        loading,
     };
 }
 

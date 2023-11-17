@@ -4,16 +4,20 @@ import { DataContext } from '../DataContext/DataContext';
 import { ListadoLigasPopulares } from '../ListadoLigasPopulares';
 import './ligaspopulares.scss';
 import { BotonVerMasLigas } from '../BotonVerMasLigas';
+import { Cargando } from '../Cargando';
 
 
 function LigasPopulares () {
 
-    const { dataTopLigas } = React.useContext(DataContext);
+    const { dataTopLigas, loading } = React.useContext(DataContext);
+    
+   
 
     return (
         <>
             <section className='section--ligas-populares'>
                 <ContenedorLigasPopulares>
+                    {loading && <Cargando />}
                     {dataTopLigas.map((liga) => (
                         <ListadoLigasPopulares 
                             key={liga.id} 
