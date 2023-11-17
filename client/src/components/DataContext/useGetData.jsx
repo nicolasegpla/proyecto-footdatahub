@@ -18,6 +18,8 @@ function useGetData () {
         .catch((error) => console.log(`tenemos errores de carga ${error}`));
     }, []);
 
+    
+
     return {
         dataTopLigas,
     };

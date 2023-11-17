@@ -1,6 +1,8 @@
 //Esta linea lo que nos permite es importar el modulo de express
 const express = require('express');
 const cors = require('cors');
+const axios = require('axios');
+
 
 //Esta linea de codigo lo que nos permite es contruir nuestra app con express
 const app = express()
@@ -18,26 +20,36 @@ app.use(express.json({
 
 app.use(cors());
 
-
-//Datos bases de la API
-const APIKEY = '?api_token=tYj0DC28VewdiBO9HaZMtTAP09YUW9tKViKowYncKVxnVNbKDDoWqVVYLsPo';
 const BaseURL = 'https://api.sportmonks.com/v3/football/';
 
 
-//Con la funcion datosLigas vamos a consumir el endpoint de leagues.
-async function datosLigas( ligas ) {
-    const res = await fetch(`${BaseURL}${ ligas }${APIKEY}`)
-    const data = await res.json()
-    
-    // Esta es la ruta creada para consumir el endpoint leagues desde nuestro cliente
-    app.get('/leagues', (req, res) => {
-        res.send(JSON.stringify(data));
+//Trae la data de todas las liga disponibles en la suscripcion//
+app.get('/leagues', (req, res) => {
+    axios.get(`${BaseURL}leagues${process.env.API_KEY}`)
+    .then(response => {
+        res.send(JSON.stringify(response.data))
     })
-}    
-datosLigas('leagues');
+    .catch(error => {
+        console.log(error);
+    });
+});
 
+//Trae la data de liga por ID//
+app.get('/leagues/:id', (req, res) => {
+    axios.get(`${BaseURL}leagues/${req.params.id}${process.env.API_KEY}`)
+    .then(response => {
+        res.send(response.data)
+    })
+    .catch(error => {
+        console.log(error);
+    });
+});
 
 
 app.listen(port, () => {
     console.log(`Estoy ejecutandome en http:/localhost:${port}`)
 })
+
+
+
+
