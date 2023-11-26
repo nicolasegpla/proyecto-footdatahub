@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BarraNavegacionHorizontal } from '../BarraNavegacionHorizontal'
 import { LigasPopulares } from '../LigasPopulares'
 import './_app.scss'
+import { ModalInfoLigas } from '../ModalInfoLigas';
 
 function App() {
 
@@ -9,6 +10,9 @@ function App() {
     <>
       <BarraNavegacionHorizontal />
       <LigasPopulares />
+      <ModalInfoLigas>
+        
+      </ModalInfoLigas>
     </>
   )
 }
