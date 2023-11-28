@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { DataContext } from "./DataContext";
+
 
 // El customHook useGetData sera el encargado de traer todas las consultas de nuestro servidor //
 function useGetData () {
@@ -7,6 +9,10 @@ function useGetData () {
     
     const [dataTopLigas, setDataTopLigas] = useState([]);// Almacena los datos de las ligas populares //
     const [loading, setLoading ] = useState(true)
+    //Estado que desplega del modal de informacion de liga//
+    const [modalInfoLigas, setModalInfoLigas] = useState(false)
+
+   
 
    
 
@@ -36,6 +42,8 @@ function useGetData () {
                 let { data } = pruebaliga;
                 
                 console.log(data.name);
+                setModalInfoLigas(true);
+
                 })
             .catch((error) => console.log(`tenemos errores de carga ${error}`));
     }
@@ -56,6 +64,8 @@ function useGetData () {
         getLeagueById,
         getAllLeagues,
         loading,
+        modalInfoLigas,
+        setModalInfoLigas,
     };
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGetData } from "./useGetData";
 
 
@@ -6,8 +6,9 @@ const DataContext = React.createContext();
 
 function DataProvider ({ children }) {
     
+    
     //Esta linea de codigo nos trae todos los elementos que se requieran del customHook useGetData // 
-    const { dataTopLigas, getLeagueById, getAllLeagues, loading } = useGetData();
+    const { dataTopLigas, getLeagueById, getAllLeagues, loading, modalInfoLigas, setModalInfoLigas } = useGetData();
 
   
     return (
@@ -17,6 +18,8 @@ function DataProvider ({ children }) {
                 getLeagueById,
                 getAllLeagues,
                 loading,
+                modalInfoLigas,
+                setModalInfoLigas,
             }}
         >
             {children}
