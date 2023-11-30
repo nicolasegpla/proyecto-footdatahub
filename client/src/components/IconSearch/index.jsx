@@ -1,4 +1,4 @@
-import './iconsearch.scss';
+import './_iconsearch.scss';
 
 
 function IconSearch ({ type }) {

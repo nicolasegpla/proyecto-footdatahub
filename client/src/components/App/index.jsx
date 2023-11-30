@@ -4,6 +4,8 @@ import { LigasPopulares } from '../LigasPopulares'
 import './_app.scss'
 import { ModalInfoLigas } from '../ModalInfoLigas';
 import { DataContext } from '../DataContext/DataContext';
+import { Cerrar } from '../Cerrar';
+import { ModuloInfoLigas } from '../ModuloInfoLiga';
 
 function App() {
 
@@ -13,9 +15,8 @@ function App() {
     <>
       <BarraNavegacionHorizontal />
       <LigasPopulares />
-      <ModalInfoLigas>
-          { modalInfoLigas && <LigasPopulares /> }
-      </ModalInfoLigas>
+      <ModuloInfoLigas />
+      
     </>
   )
 }

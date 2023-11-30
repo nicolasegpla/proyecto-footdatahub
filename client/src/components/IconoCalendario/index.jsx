@@ -1,4 +1,4 @@
-import './iconocalendario.scss';
+import './_iconocalendario.scss';
 
 function IconoCalendario ({ type }) {
     return (

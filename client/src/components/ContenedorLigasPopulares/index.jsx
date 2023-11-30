@@ -1,5 +1,5 @@
 import { BotonVerMasLigas } from '../BotonVerMasLigas';
-import './contenedorligaspopulares.scss';
+import './_contenedorligaspopulares.scss';
 
 function ContenedorLigasPopulares (props) {
     return (

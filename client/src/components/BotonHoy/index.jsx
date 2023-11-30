@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconoCalendario } from '../IconoCalendario';
-import './botonhoy.scss';
+import './_botonhoy.scss';
 
 
 function BotonHoy () {

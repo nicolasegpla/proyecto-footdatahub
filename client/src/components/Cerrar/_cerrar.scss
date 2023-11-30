@@ -1,0 +1,15 @@
+@use '../../sass/global';
+
+.div--cerrar {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    cursor: pointer;
+}

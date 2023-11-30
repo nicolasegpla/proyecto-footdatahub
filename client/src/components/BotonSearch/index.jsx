@@ -1,5 +1,5 @@
 import { IconSearch } from '../IconSearch'
-import './botonsearch.scss';
+import './_botonsearch.scss';
 
 
 function BotonSearch () {

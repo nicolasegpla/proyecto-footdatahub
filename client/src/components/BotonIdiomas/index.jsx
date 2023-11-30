@@ -1,5 +1,5 @@
 import { IconoIdiomas } from '../IconoIdiomas'
-import './botonidiomas.scss';
+import './_botonidiomas.scss';
 
 function BotonIdiomas () {
     return (

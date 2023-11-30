@@ -1,4 +1,4 @@
-import './iconoidiomas.scss';
+import './_iconoidiomas.scss';
 function IconoIdiomas ( { type }) {
     return (
         <>

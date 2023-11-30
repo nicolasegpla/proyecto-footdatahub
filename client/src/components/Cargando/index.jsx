@@ -1,4 +1,4 @@
-import './cargando.scss';
+import './_cargando.scss';
 
 function Cargando () {
     return(

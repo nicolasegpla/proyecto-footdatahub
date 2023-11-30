@@ -1,6 +1,6 @@
 import { Logo } from '../Logo'
 import { MenuHamburguesa } from '../MenuHamburguesa'
-import './navegacionhozcontenedorlogo.scss'
+import './_navegacionhozcontenedorlogo.scss'
 
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { IconVerMas } from '../IconVerMas'
 import { DataContext } from '../DataContext/DataContext';
-import './botonvermasligas.scss';
+import './_botonvermasligas.scss';
 
 function BotonVerMasLigas () {
 

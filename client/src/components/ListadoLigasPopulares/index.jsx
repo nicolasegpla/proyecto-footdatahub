@@ -1,5 +1,5 @@
 import React from 'react';
-import './listadoligaspopulares.scss';
+import './_listadoligaspopulares.scss';
 import { DataContext } from '../DataContext/DataContext';
 
 function ListadoLigasPopulares ({ img, id, name }) {

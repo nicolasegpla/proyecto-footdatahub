@@ -1,4 +1,4 @@
-import './iconvermas.scss';
+import './_iconvermas.scss';
 
 function IconVerMas () {
     return (

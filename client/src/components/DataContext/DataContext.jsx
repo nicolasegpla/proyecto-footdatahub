@@ -11,6 +11,11 @@ function DataProvider ({ children }) {
     const { dataTopLigas, getLeagueById, getAllLeagues, loading, modalInfoLigas, setModalInfoLigas } = useGetData();
 
   
+    function cerrarModalInfoLigas() {
+        setModalInfoLigas(false);
+        console.log('tulus')
+    }
+
     return (
         <DataContext.Provider 
             value={{
@@ -20,6 +25,7 @@ function DataProvider ({ children }) {
                 loading,
                 modalInfoLigas,
                 setModalInfoLigas,
+                cerrarModalInfoLigas,
             }}
         >
             {children}

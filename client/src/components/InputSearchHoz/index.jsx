@@ -1,5 +1,5 @@
 import { IconSearch } from '../IconSearch'
-import './inputsearchhoz.scss'
+import './_inputsearchhoz.scss'
 
 function InputSearchHoz () {
     return (

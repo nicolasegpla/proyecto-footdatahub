@@ -2,7 +2,7 @@ import React from 'react';
 import { ContenedorLigasPopulares } from '../ContenedorLigasPopulares';
 import { DataContext } from '../DataContext/DataContext';
 import { ListadoLigasPopulares } from '../ListadoLigasPopulares';
-import './ligaspopulares.scss';
+import './_ligaspopulares.scss';
 import { BotonVerMasLigas } from '../BotonVerMasLigas';
 import { Cargando } from '../Cargando';
 
